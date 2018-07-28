@@ -9,6 +9,7 @@ TagManager:
   - Whater
   - Table
   - Car
+  - Tree
   layers:
   - Default
   - TransparentFX

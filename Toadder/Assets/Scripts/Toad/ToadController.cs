@@ -9,7 +9,7 @@ public class ToadController : MonoBehaviour
     public float jumpForce;
     public float JumpDistance;
     public List<Vector3> characterRotations;
-
+    public List<GameObject> MovementColliders;
     private float jumpStartHeight;
     private float tableSpeed;
     private bool inputMovement;
@@ -18,8 +18,6 @@ public class ToadController : MonoBehaviour
     private Vector3 position;
     private Vector3 auxPosition;
     
-
-   
     void Awake()
     {
         instance = this;
@@ -46,25 +44,25 @@ public class ToadController : MonoBehaviour
 
         if (inputMovement)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) && !MovementColliders[0].gameObject.GetComponent<MovementColliders>().trigger)
             {
                 auxPosition.z += JumpDistance;
                 transform.eulerAngles = characterRotations[0];
                 tableMovement = false;
             }
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S) && !MovementColliders[1].gameObject.GetComponent<MovementColliders>().trigger)
             {
                 auxPosition.z -= JumpDistance;
                 transform.eulerAngles = characterRotations[2];
                 tableMovement = false;
             }
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) && !MovementColliders[2].gameObject.GetComponent<MovementColliders>().trigger)
             {
                 auxPosition.x -= JumpDistance;
                 transform.eulerAngles = characterRotations[3];
                 tableMovement = false;
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D) && !MovementColliders[3].gameObject.GetComponent<MovementColliders>().trigger)
             {
                 auxPosition.x += JumpDistance;
                 transform.eulerAngles = characterRotations[1];
@@ -87,13 +85,13 @@ public class ToadController : MonoBehaviour
             UpdateJumpHeight();
 
             if (auxPosition.x > position.x + movementTolerance)            
-                position.x += Time.fixedDeltaTime;            
+                position.x += Time.deltaTime;            
             else if (auxPosition.x < position.x - movementTolerance)            
-                position.x -= Time.fixedDeltaTime;            
+                position.x -= Time.deltaTime;            
             else if (auxPosition.z > position.z + movementTolerance)            
-                position.z += Time.fixedDeltaTime;            
+                position.z += Time.deltaTime;            
             else if (auxPosition.z < position.z - movementTolerance)            
-                position.z -= Time.fixedDeltaTime;            
+                position.z -= Time.deltaTime;            
             else            
                 inputMovement = true;           
             
@@ -103,11 +101,11 @@ public class ToadController : MonoBehaviour
         {
             if (directionTable)
             {
-                transform.position += Vector3.right * Time.fixedDeltaTime * tableSpeed;
+                transform.position += Vector3.right * Time.deltaTime * tableSpeed;
             }
             else
             {
-                transform.position += Vector3.left * Time.fixedDeltaTime * tableSpeed;
+                transform.position += Vector3.left * Time.deltaTime * tableSpeed;
             }
             position = transform.position;
             auxPosition = position;
@@ -132,7 +130,7 @@ public class ToadController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Whater" || collision.gameObject.tag == "Car")
+        if (collision.gameObject.tag == "Whater"||collision.gameObject.tag == "Car")
         {
             Destroy(gameObject);   
         }
