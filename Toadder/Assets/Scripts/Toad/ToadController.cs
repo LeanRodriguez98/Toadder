@@ -4,27 +4,34 @@ using UnityEngine;
 
 public class ToadController : MonoBehaviour
 {
+    public static ToadController instance;
     public float movementTolerance;
     public float jumpForce;
     public float JumpDistance;
+    public List<Vector3> characterRotations;
 
     private float jumpStartHeight;
+    private float tableSpeed;
     private bool inputMovement;
+    private bool tableMovement;
+    private bool directionTable;
     private Vector3 position;
     private Vector3 auxPosition;
-    private Vector3 JumpStartPosition;
-    private Rigidbody rb;
-  
+    
 
+   
+    void Awake()
+    {
+        instance = this;
+    }
 
     // Use this for initialization
     void Start()
     {
         inputMovement = true;
+        tableMovement = false;
         position = transform.position;
-        auxPosition = transform.position;
-        rb = GetComponent<Rigidbody>();
-
+        auxPosition = transform.position;      
     }
 
     // Update is called once per frame
@@ -40,13 +47,29 @@ public class ToadController : MonoBehaviour
         if (inputMovement)
         {
             if (Input.GetKeyDown(KeyCode.W))
+            {
                 auxPosition.z += JumpDistance;
+                transform.eulerAngles = characterRotations[0];
+                tableMovement = false;
+            }
             if (Input.GetKeyDown(KeyCode.S))
+            {
                 auxPosition.z -= JumpDistance;
+                transform.eulerAngles = characterRotations[2];
+                tableMovement = false;
+            }
             if (Input.GetKeyDown(KeyCode.A))
+            {
                 auxPosition.x -= JumpDistance;
+                transform.eulerAngles = characterRotations[3];
+                tableMovement = false;
+            }
             if (Input.GetKeyDown(KeyCode.D))
+            {
                 auxPosition.x += JumpDistance;
+                transform.eulerAngles = characterRotations[1];
+                tableMovement = false;
+            }
 
             if (auxPosition.x > position.x + movementTolerance ||
                 auxPosition.x < position.x - movementTolerance ||
@@ -72,9 +95,29 @@ public class ToadController : MonoBehaviour
             else if (auxPosition.z < position.z - movementTolerance)            
                 position.z -= Time.deltaTime;            
             else            
-                inputMovement = true;            
+                inputMovement = true;           
+            
         }
-        transform.position = position;
+
+        if (tableMovement)
+        {
+            if (directionTable)
+            {
+                transform.position += Vector3.right * Time.deltaTime * tableSpeed;
+            }
+            else
+            {
+                transform.position += Vector3.left * Time.deltaTime * tableSpeed;
+            }
+            position = transform.position;
+            auxPosition = position;
+
+        }
+        else
+        {
+            transform.position = position;
+        }
+
     }
 
 
@@ -85,6 +128,27 @@ public class ToadController : MonoBehaviour
 
         if (Mathf.Abs(auxPosition.x - position.x) > movementTolerance)
             position.y = -((-(JumpDistance / 2 * JumpDistance / 2) * jumpForce) + ((-JumpDistance / 2) + (Mathf.Abs(auxPosition.x - position.x))) * ((-JumpDistance / 2) + (Mathf.Abs(auxPosition.x - position.x))) * jumpForce) + jumpStartHeight;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Whater")
+        {
+            Destroy(gameObject);   
+        }
+        if (collision.gameObject.tag == "Table")
+        {
+            tableMovement = true;
+            tableSpeed = collision.gameObject.GetComponent<ObjectMovement>().speedMovement;
+            if (collision.gameObject.GetComponent<ObjectMovement>().spawnPosition.x < 0)
+            {
+                directionTable = true;
+            }
+            else
+            {
+                directionTable = false;
+            }
+        }
     }
 }
 
