@@ -87,13 +87,13 @@ public class ToadController : MonoBehaviour
             UpdateJumpHeight();
 
             if (auxPosition.x > position.x + movementTolerance)            
-                position.x += Time.deltaTime;            
+                position.x += Time.fixedDeltaTime;            
             else if (auxPosition.x < position.x - movementTolerance)            
-                position.x -= Time.deltaTime;            
+                position.x -= Time.fixedDeltaTime;            
             else if (auxPosition.z > position.z + movementTolerance)            
-                position.z += Time.deltaTime;            
+                position.z += Time.fixedDeltaTime;            
             else if (auxPosition.z < position.z - movementTolerance)            
-                position.z -= Time.deltaTime;            
+                position.z -= Time.fixedDeltaTime;            
             else            
                 inputMovement = true;           
             
@@ -103,11 +103,11 @@ public class ToadController : MonoBehaviour
         {
             if (directionTable)
             {
-                transform.position += Vector3.right * Time.deltaTime * tableSpeed;
+                transform.position += Vector3.right * Time.fixedDeltaTime * tableSpeed;
             }
             else
             {
-                transform.position += Vector3.left * Time.deltaTime * tableSpeed;
+                transform.position += Vector3.left * Time.fixedDeltaTime * tableSpeed;
             }
             position = transform.position;
             auxPosition = position;
@@ -132,7 +132,7 @@ public class ToadController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Whater")
+        if (collision.gameObject.tag == "Whater" || collision.gameObject.tag == "Car")
         {
             Destroy(gameObject);   
         }

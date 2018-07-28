@@ -193,6 +193,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114724445177543208, guid: 439c458ae542a25409ef1ecb1c36744c,
+        type: 2}
+      propertyPath: spawnTimer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 439c458ae542a25409ef1ecb1c36744c, type: 2}
   m_IsPrefabParent: 0
@@ -796,10 +801,6 @@ Prefab:
       propertyPath: m_Name
       value: WhaterLeft (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4558235751364918, guid: 38c6e1d6c6314124586dcb1caa8383e5, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.79999995
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38c6e1d6c6314124586dcb1caa8383e5, type: 2}
   m_IsPrefabParent: 0
@@ -816,11 +817,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4302136636961628, guid: 93a4e4427a2d51b4da86042f8f916922, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.95
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4302136636961628, guid: 93a4e4427a2d51b4da86042f8f916922, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302136636961628, guid: 93a4e4427a2d51b4da86042f8f916922, type: 2}
       propertyPath: m_LocalRotation.x
