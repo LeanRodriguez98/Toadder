@@ -21,15 +21,16 @@ public class MovementColliders : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.tag == "Tree")
+        if (collision.gameObject.tag == "Tree" || collision.gameObject.tag == "LimitWall")
         {
             trigger = true;
          
         }
     }
+ 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.tag == "Tree")
+        if (collision.gameObject.tag == "Tree" || collision.gameObject.tag == "LimitWall")
         {
             trigger = false;
         }

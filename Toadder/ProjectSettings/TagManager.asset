@@ -11,6 +11,7 @@ TagManager:
   - Car
   - Tree
   - Toad
+  - LimitWall
   layers:
   - Default
   - TransparentFX
