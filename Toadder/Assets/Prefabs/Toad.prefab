@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 23420449187028346}
   m_Layer: 0
   m_Name: Toad
-  m_TagString: Untagged
+  m_TagString: Toad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114900841753408100}
   m_Layer: 0
   m_Name: Toad
-  m_TagString: Untagged
+  m_TagString: Toad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1935893275969468}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 35, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4781466404172406}
@@ -148,7 +148,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1846829164144766}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: -35, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4781466404172406}
@@ -161,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1016002805695688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4781466404172406}
@@ -174,7 +174,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1867960921604916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4781466404172406}
@@ -187,7 +187,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1543931076105154}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -126.2}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4744290934676650}
@@ -264,7 +264,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 30, y: 30, z: 30}
-  m_Center: {x: 0, y: 0, z: 35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65231291027144376
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -276,7 +276,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 30, y: 30, z: 30}
-  m_Center: {x: 0, y: 0, z: -35}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65435910588757968
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -288,7 +288,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 30, y: 30, z: 30}
-  m_Center: {x: 35, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65718954586983960
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -300,7 +300,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 30, y: 30, z: 30}
-  m_Center: {x: -35, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65974590737092546
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -363,6 +363,12 @@ MonoBehaviour:
   movementTolerance: 0.01
   jumpForce: 5
   JumpDistance: 1
+  timeDeadCamera: 1.5
+  lifes: 3
+  bloodParticles: {fileID: 1116270043477850, guid: 0f61f53f67ad0da4fb17c888ef4a9e89,
+    type: 2}
+  whaterParticles: {fileID: 1116270043477850, guid: 983549390c4bd2f42a119fd12aa2a0b3,
+    type: 2}
   characterRotations:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 90, z: 0}
