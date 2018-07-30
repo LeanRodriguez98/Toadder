@@ -11,7 +11,11 @@ public class LimitsPosition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        position.z = ToadController.instance.transform.position.z;
-        transform.position = position;
+        if (ToadController.instance != null)
+        {
+            position.z = ToadController.instance.transform.position.z;
+            transform.position = position;
+        }
+        
 	}
 }

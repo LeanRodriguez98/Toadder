@@ -113,6 +113,12 @@ public class ToadController : MonoBehaviour
 
             if (tableMovement)
             {
+                if (MovementColliders[3].gameObject.GetComponent<MovementColliders>().trigger ||
+                    MovementColliders[2].gameObject.GetComponent<MovementColliders>().trigger)
+                {
+                    tableMovement = false;
+                }
+
                 if (directionTable)
                 {
                     transform.position += Vector3.right * Time.deltaTime * tableSpeed;

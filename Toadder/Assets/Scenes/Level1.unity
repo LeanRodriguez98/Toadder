@@ -1217,10 +1217,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4558235751364918, guid: 439c458ae542a25409ef1ecb1c36744c, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.79999995
-      objectReference: {fileID: 0}
     - target: {fileID: 1335061673852774, guid: 439c458ae542a25409ef1ecb1c36744c, type: 2}
       propertyPath: m_Name
       value: WhaterRight (1)
