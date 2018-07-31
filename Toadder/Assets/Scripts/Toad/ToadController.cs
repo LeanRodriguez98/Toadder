@@ -185,7 +185,7 @@ public class ToadController : MonoBehaviour
             GetComponentInChildren<MeshRenderer>().enabled = false;
             Instantiate(bloodParticles,transform.position,Quaternion.identity);
         }
-        if (collision.gameObject.tag == "Table")
+        if (collision.gameObject.tag == "Table" || collision.gameObject.tag == "Tourtle")
         {
             tableMovement = true;
             tableSpeed = collision.gameObject.GetComponent<ObjectMovement>().speedMovement;

@@ -12,6 +12,7 @@ TagManager:
   - Tree
   - Toad
   - LimitWall
+  - Tourtle
   layers:
   - Default
   - TransparentFX
