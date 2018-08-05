@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 9ccb5c7d350c5e941aa0d73bd51a60ca,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -5866,26 +5867,26 @@ Transform:
   - {fileID: 697574132}
   - {fileID: 681409087}
   - {fileID: 700890522}
+  - {fileID: 1835102524}
   - {fileID: 967384940}
   - {fileID: 410982714}
   - {fileID: 894111778}
   - {fileID: 396632648}
-  - {fileID: 1298903710}
   - {fileID: 624354129}
   - {fileID: 1340531989}
   - {fileID: 873891979}
-  - {fileID: 1835102524}
+  - {fileID: 1298903710}
   - {fileID: 1303051196}
   - {fileID: 1707064847}
   - {fileID: 1549192606}
   - {fileID: 279616}
   - {fileID: 1979663736}
-  - {fileID: 282402994}
+  - {fileID: 1572515224}
   - {fileID: 1098104758}
+  - {fileID: 282402994}
   - {fileID: 116089103}
   - {fileID: 948876674}
   - {fileID: 1559343307}
-  - {fileID: 1572515224}
   - {fileID: 1712601448}
   - {fileID: 1738225687}
   - {fileID: 1286936001}
@@ -9295,29 +9296,29 @@ Transform:
   - {fileID: 1896844953}
   - {fileID: 69803391}
   - {fileID: 1427300753}
+  - {fileID: 1809653897}
   - {fileID: 1927082684}
   - {fileID: 1729255460}
   - {fileID: 294128705}
-  - {fileID: 1841910789}
-  - {fileID: 1809653897}
-  - {fileID: 267601160}
-  - {fileID: 920261927}
-  - {fileID: 255498125}
-  - {fileID: 1768144198}
-  - {fileID: 2076677157}
-  - {fileID: 701320412}
-  - {fileID: 403768181}
-  - {fileID: 40402052}
-  - {fileID: 1838549405}
-  - {fileID: 1049595062}
   - {fileID: 788407053}
+  - {fileID: 1841910789}
+  - {fileID: 267601160}
+  - {fileID: 255498125}
+  - {fileID: 920261927}
+  - {fileID: 2076677157}
+  - {fileID: 40402052}
+  - {fileID: 403768181}
+  - {fileID: 1838549405}
+  - {fileID: 1768144198}
+  - {fileID: 1049595062}
+  - {fileID: 701320412}
   - {fileID: 648306380}
-  - {fileID: 1874052638}
-  - {fileID: 1882945212}
   - {fileID: 756747568}
   - {fileID: 1945760844}
   - {fileID: 1960676832}
+  - {fileID: 1882945212}
   - {fileID: 2067120009}
+  - {fileID: 1874052638}
   - {fileID: 1571544387}
   - {fileID: 188845148}
   - {fileID: 737448572}
@@ -13137,20 +13138,20 @@ Transform:
   - {fileID: 651373416}
   - {fileID: 1022373420}
   - {fileID: 733667653}
-  - {fileID: 192702846}
+  - {fileID: 1817977259}
   - {fileID: 543005377}
   - {fileID: 1523682407}
   - {fileID: 773643734}
   - {fileID: 1813262356}
-  - {fileID: 1817977259}
+  - {fileID: 192702846}
   - {fileID: 341494536}
   - {fileID: 2033138944}
   - {fileID: 1286960967}
-  - {fileID: 225593721}
   - {fileID: 1052863955}
+  - {fileID: 225593721}
   - {fileID: 982475066}
-  - {fileID: 567908398}
   - {fileID: 496378413}
+  - {fileID: 567908398}
   - {fileID: 1890444627}
   - {fileID: 679844348}
   - {fileID: 1116513866}

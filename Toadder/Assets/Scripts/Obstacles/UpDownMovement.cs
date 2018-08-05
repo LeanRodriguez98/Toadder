@@ -5,6 +5,7 @@ using UnityEngine;
 public class UpDownMovement : MonoBehaviour {
     public float TimeUp;
     public float TimeDown;
+    public float downDistance;
     private float auxTimeUp;
     private float auxTimeDown;
     private Vector3 upPosition;
@@ -14,7 +15,7 @@ public class UpDownMovement : MonoBehaviour {
 	void Start () {
         upPosition = transform.position;
         downPosition = transform.position;
-        downPosition.y = downPosition.y - transform.localScale.y;
+        downPosition.y = downPosition.y - downDistance;
         auxTimeUp = 0;
         auxTimeDown = 0;
     }

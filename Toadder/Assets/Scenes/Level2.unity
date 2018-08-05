@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 5b04fd056b66696489aae3292729356a,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -3919,18 +3920,18 @@ Transform:
   - {fileID: 771376177}
   - {fileID: 318034542}
   - {fileID: 2039183048}
-  - {fileID: 1212881094}
-  - {fileID: 700890522}
-  - {fileID: 697574132}
-  - {fileID: 967384940}
-  - {fileID: 681409087}
-  - {fileID: 894111778}
-  - {fileID: 513656241}
   - {fileID: 74486183}
-  - {fileID: 873891979}
-  - {fileID: 410982714}
-  - {fileID: 1298903710}
+  - {fileID: 513656241}
+  - {fileID: 1212881094}
+  - {fileID: 697574132}
+  - {fileID: 681409087}
+  - {fileID: 700890522}
+  - {fileID: 967384940}
+  - {fileID: 894111778}
   - {fileID: 396632648}
+  - {fileID: 410982714}
+  - {fileID: 873891979}
+  - {fileID: 1298903710}
   - {fileID: 1303051196}
   - {fileID: 584566937}
   - {fileID: 1979663736}
@@ -6796,8 +6797,8 @@ Transform:
   - {fileID: 1909679668}
   - {fileID: 1421402931}
   - {fileID: 926792162}
-  - {fileID: 973591486}
   - {fileID: 994658202}
+  - {fileID: 973591486}
   - {fileID: 1723853921}
   - {fileID: 1340627937}
   - {fileID: 745800081}
@@ -8699,12 +8700,12 @@ Transform:
   - {fileID: 1851464919}
   - {fileID: 1356919704}
   - {fileID: 776695124}
-  - {fileID: 334544927}
+  - {fileID: 846610327}
   - {fileID: 751259379}
+  - {fileID: 334544927}
   - {fileID: 1730388519}
   - {fileID: 1512005177}
   - {fileID: 651373416}
-  - {fileID: 846610327}
   - {fileID: 1788094320}
   - {fileID: 1022373420}
   - {fileID: 733667653}

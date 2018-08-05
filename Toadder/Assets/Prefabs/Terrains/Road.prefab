@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 1275212870611470, guid: f011d22f6908c1d49bb88dca37ede3b1, type: 2}
+  - {fileID: 1118507028058568, guid: bf03b84c851e83d458399909201e38cd, type: 2}
   maxSpawnTimer: 2
   minSpawnTimer: 8
   randomSpawn: 1
