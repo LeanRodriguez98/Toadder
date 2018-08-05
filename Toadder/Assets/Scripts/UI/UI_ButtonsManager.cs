@@ -5,14 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UI_ButtonsManager : MonoBehaviour {
-
+    public Object MainMenuScene;
     public GameObject PauseButton = null;
     public GameObject ResumeButton = null;
     public GameObject BackToMainMenuButton = null;
-    public GameObject LeftAndRightArrowsImage = null;
-    public GameObject UpArrowAndSpace = null;
+    public GameObject ControlsImage = null;
+   /* public GameObject UpArrowAndSpace = null;
     public Text RotateShip = null;
-    public Text ActivatePropulsion = null;
+    public Text ActivatePropulsion = null;*/
     void Start()
     {
         if (PauseButton != null)
@@ -21,14 +21,14 @@ public class UI_ButtonsManager : MonoBehaviour {
             ResumeButton.SetActive(false);
         if (BackToMainMenuButton != null)
             BackToMainMenuButton.SetActive(false);
-        if (LeftAndRightArrowsImage != null)
-            LeftAndRightArrowsImage.SetActive(false);
-        if (UpArrowAndSpace != null)
+        if (ControlsImage != null)
+            ControlsImage.SetActive(false);
+        /*if (UpArrowAndSpace != null)
             UpArrowAndSpace.SetActive(false);
         if (RotateShip != null)
             RotateShip.enabled = false;
         if (ActivatePropulsion != null)
-            ActivatePropulsion.enabled = false;
+            ActivatePropulsion.enabled = false;*/
     }
 
     public void Pause()
@@ -37,10 +37,10 @@ public class UI_ButtonsManager : MonoBehaviour {
         PauseButton.SetActive(false);
         ResumeButton.SetActive(true);
         BackToMainMenuButton.SetActive(true);
-        LeftAndRightArrowsImage.SetActive(true);
-        UpArrowAndSpace.SetActive(true);
+        ControlsImage.SetActive(true);
+      /*  UpArrowAndSpace.SetActive(true);
         RotateShip.enabled = true;
-        ActivatePropulsion.enabled = true;
+        ActivatePropulsion.enabled = true;*/
     }
 
     public void Resume()
@@ -49,10 +49,10 @@ public class UI_ButtonsManager : MonoBehaviour {
         PauseButton.SetActive(true);
         ResumeButton.SetActive(false);
         BackToMainMenuButton.SetActive(false);
-        LeftAndRightArrowsImage.SetActive(false);
-        UpArrowAndSpace.SetActive(false);
+        ControlsImage.SetActive(false);
+       /* UpArrowAndSpace.SetActive(false);
         RotateShip.enabled = false;
-        ActivatePropulsion.enabled = false;
+        ActivatePropulsion.enabled = false;*/
     }
 
     public void Test()
@@ -60,17 +60,17 @@ public class UI_ButtonsManager : MonoBehaviour {
         Debug.Log("TEST");
     }
 
-    public void Change_Scense(string LevelName)
+    public void Change_Scense(Object Level)
     {
         if (Time.timeScale != 1)
         {
             Time.timeScale = 1;
         }
 
-        SceneManager.LoadScene(LevelName);
+        SceneManager.LoadScene(Level.name);
     }
 
-  /*  public void BackToMainMenu()
+    public void BackToMainMenu()
     {
         if (Time.timeScale != 1)
         {
@@ -80,16 +80,16 @@ public class UI_ButtonsManager : MonoBehaviour {
         {
             LoadingScenes.Instanciate.Level = 1;
         }
-        if (PlayerStats.Instanciate != null)
+        /*if (PlayerStats.Instanciate != null)
         {
             PlayerStats.Instanciate.Points = 0;
 
-        }
+        }*/
 
 
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(MainMenuScene.name);
 
-    }*/
+    }
 
     public void Exit()
     {
