@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ToadController : MonoBehaviour
 {
@@ -52,6 +53,19 @@ public class ToadController : MonoBehaviour
     void Movement()
     {
         auxPosition.y = transform.position.y;
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            {
+                if (Time.timeScale != 1)
+                {
+                    Time.timeScale = 1;
+                }
+
+                SceneManager.LoadScene("LoadingScene");
+            }
+        }
+
         if (!lifeDown)
         {
 
