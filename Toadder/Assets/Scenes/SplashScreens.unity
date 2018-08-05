@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Fade: 5
   wait: 2
-  NextSceneName: Level1
+  NextSceneName: MainMenu
   SplashImages:
   - {fileID: 222043793}
   - {fileID: 554585305}

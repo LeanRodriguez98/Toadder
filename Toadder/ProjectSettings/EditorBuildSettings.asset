@@ -17,3 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SplashScreens.unity
     guid: 592ff66a8b423bc4f9098cd5c61881b9
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 11c3357322a952348b0ce64764028a72
+  - enabled: 1
+    path: Assets/Scenes/InfinitLevel.unity
+    guid: 96907f8e30f6dd54c8b4eb3c332af846
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 39c1aed40bbff2e4fb27feab84bcf8d9
