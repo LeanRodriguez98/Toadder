@@ -27,20 +27,17 @@ public class ToadController : MonoBehaviour
     private Vector3 position;
     private Vector3 auxPosition;
     private Vector3 startPosition;
-
-
    
     void Awake()
     {
-        instance = this;
-        points = PlayerStats.Instancie.Points;
-        auxPoints = PlayerStats.Instancie.Points;
+        instance = this;        
     }
 
     // Use this for initialization
     void Start()
     {
-        
+        points = PlayerStats.Instancie.Points;
+        auxPoints = PlayerStats.Instancie.Points;
         inputMovement = true;
         tableMovement = false;
         lifeDown = false;
@@ -159,7 +156,7 @@ public class ToadController : MonoBehaviour
                 transform.position = position;
             }
         }
-
+        
     }
 
     void LifeDown()
@@ -202,12 +199,15 @@ public class ToadController : MonoBehaviour
             lifeDown = true;
             GetComponentInChildren<MeshRenderer>().enabled = false;
             Instantiate(whaterParticles, transform.position, Quaternion.identity);
+            auxPoints = 0;
         }
         if (collision.gameObject.tag == "Car")
         {
             lifeDown = true;
             GetComponentInChildren<MeshRenderer>().enabled = false;
             Instantiate(bloodParticles,transform.position,Quaternion.identity);
+            auxPoints = 0;
+
         }
         if (collision.gameObject.tag == "Table" || collision.gameObject.tag == "Tourtle")
         {

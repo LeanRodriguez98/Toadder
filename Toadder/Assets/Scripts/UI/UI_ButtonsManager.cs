@@ -10,9 +10,7 @@ public class UI_ButtonsManager : MonoBehaviour {
     public GameObject ResumeButton = null;
     public GameObject BackToMainMenuButton = null;
     public GameObject ControlsImage = null;
-   /* public GameObject UpArrowAndSpace = null;
-    public Text RotateShip = null;
-    public Text ActivatePropulsion = null;*/
+  
     void Start()
     {
         if (PauseButton != null)
@@ -23,12 +21,7 @@ public class UI_ButtonsManager : MonoBehaviour {
             BackToMainMenuButton.SetActive(false);
         if (ControlsImage != null)
             ControlsImage.SetActive(false);
-        /*if (UpArrowAndSpace != null)
-            UpArrowAndSpace.SetActive(false);
-        if (RotateShip != null)
-            RotateShip.enabled = false;
-        if (ActivatePropulsion != null)
-            ActivatePropulsion.enabled = false;*/
+    
     }
 
     public void Pause()
@@ -38,9 +31,7 @@ public class UI_ButtonsManager : MonoBehaviour {
         ResumeButton.SetActive(true);
         BackToMainMenuButton.SetActive(true);
         ControlsImage.SetActive(true);
-      /*  UpArrowAndSpace.SetActive(true);
-        RotateShip.enabled = true;
-        ActivatePropulsion.enabled = true;*/
+
     }
 
     public void Resume()
@@ -50,9 +41,7 @@ public class UI_ButtonsManager : MonoBehaviour {
         ResumeButton.SetActive(false);
         BackToMainMenuButton.SetActive(false);
         ControlsImage.SetActive(false);
-       /* UpArrowAndSpace.SetActive(false);
-        RotateShip.enabled = false;
-        ActivatePropulsion.enabled = false;*/
+ 
     }
 
     public void Test()
