@@ -11,6 +11,8 @@ public class ToadController : MonoBehaviour
     public float JumpDistance;
     public float timeDeadCamera;
     public int lifes;
+    public int pointsPerJump;
+    [HideInInspector]public int points;
     public GameObject bloodParticles;
     public GameObject whaterParticles;
     public List<Vector3> characterRotations;
@@ -18,6 +20,7 @@ public class ToadController : MonoBehaviour
     private float jumpStartHeight;
     private float tableSpeed;
     private float auxTimeDeadCamera;
+    private int auxPoints;
     private bool inputMovement;
     private bool tableMovement;
     private bool directionTable;
@@ -25,14 +28,20 @@ public class ToadController : MonoBehaviour
     private Vector3 position;
     private Vector3 auxPosition;
     private Vector3 startPosition;
+
+
+   
     void Awake()
     {
         instance = this;
+        points = PlayerStats.Instancie.Points;
+        auxPoints = PlayerStats.Instancie.Points;
     }
 
     // Use this for initialization
     void Start()
     {
+        
         inputMovement = true;
         tableMovement = false;
         lifeDown = false;
@@ -77,12 +86,23 @@ public class ToadController : MonoBehaviour
                     auxPosition.z += JumpDistance;
                     transform.eulerAngles = characterRotations[0];
                     tableMovement = false;
+                    if (auxPoints == points)
+                    {
+                        points += pointsPerJump;
+                        auxPoints += pointsPerJump;
+                    }
+                    else if (auxPoints < points)
+                    {
+                        auxPoints += pointsPerJump;
+                    }
                 }
                 if (Input.GetKeyDown(KeyCode.S) && !MovementColliders[1].gameObject.GetComponent<MovementColliders>().trigger)
                 {
                     auxPosition.z -= JumpDistance;
                     transform.eulerAngles = characterRotations[2];
                     tableMovement = false;
+                    auxPoints += -pointsPerJump;
+
                 }
                 if (Input.GetKeyDown(KeyCode.A) && !MovementColliders[2].gameObject.GetComponent<MovementColliders>().trigger)
                 {
@@ -150,6 +170,7 @@ public class ToadController : MonoBehaviour
                 transform.position = position;
             }
         }
+
     }
 
     void LifeDown()

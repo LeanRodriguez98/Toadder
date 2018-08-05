@@ -76,16 +76,14 @@ public class UI_ButtonsManager : MonoBehaviour {
         {
             Time.timeScale = 1;
         }
-        if (LoadingScenes.Instanciate != null)
+        if (LoadingScenes.Instancie != null)
         {
-            LoadingScenes.Instanciate.Level = 1;
+            LoadingScenes.Instancie.Level = 1;
         }
-        /*if (PlayerStats.Instanciate != null)
+        if (PlayerStats.Instancie != null)
         {
-            PlayerStats.Instanciate.Points = 0;
-
-        }*/
-
+            PlayerStats.Instancie.Points = 0;
+        }
 
         SceneManager.LoadScene(MainMenuScene.name);
 

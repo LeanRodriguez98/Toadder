@@ -8,6 +8,6 @@ public class UI_LoadingText : MonoBehaviour {
 
     void Update()
     {
-        Loading.text = LoadingScenes.Instanciate.LoadingText;
+        Loading.text = LoadingScenes.Instancie.LoadingText;
     }
 }

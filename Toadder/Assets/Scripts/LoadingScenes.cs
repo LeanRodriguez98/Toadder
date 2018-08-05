@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScenes : MonoBehaviour {
 
-    public static LoadingScenes Instanciate;
+    public static LoadingScenes Instancie;
     public Object[] Levels;
     public Object LoadingScene;
     public Object credits;
@@ -17,9 +17,9 @@ public class LoadingScenes : MonoBehaviour {
 
     void Awake()
     {
-        if (Instanciate == null)
+        if (Instancie == null)
         {
-            Instanciate = this;
+            Instancie = this;
             DontDestroyOnLoad(gameObject);
         }
         else
