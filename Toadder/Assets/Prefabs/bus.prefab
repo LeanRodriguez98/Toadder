@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrain: {fileID: 1966044963610668, guid: 2b9f54795e5959a4998a730c6cbb3988, type: 2}
-  speedMovement: 5
+  speedMovement: 4
   spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!198 &198153534565165030
 ParticleSystem:

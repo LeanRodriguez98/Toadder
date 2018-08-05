@@ -28,10 +28,12 @@ public class SpawnObject : MonoBehaviour {
                 direction = false;
             }
         }
-    }
+        auxTimer = Random.Range(minSpawnTimer, maxSpawnTimer);
 
-    // Update is called once per frame
-    void Update () {
+}
+
+// Update is called once per frame
+void Update () {
         auxTimer += Time.deltaTime;
         if (auxTimer > spawnTimer)
         {
