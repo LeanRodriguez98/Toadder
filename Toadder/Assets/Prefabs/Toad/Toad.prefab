@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 4744290934676650}
   - component: {fileID: 65204604638438948}
   - component: {fileID: 114782279656852782}
+  - component: {fileID: 114221417705392182}
   m_Layer: 0
   m_Name: FronCollider
   m_TagString: Untagged
@@ -313,6 +314,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 20, y: 20, z: 20}
   m_Center: {x: 0, y: 10, z: 0}
+--- !u!114 &114221417705392182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867960921604916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de86e12757978924489fac7c8dc43fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 0
 --- !u!114 &114588783161252916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,6 +378,8 @@ MonoBehaviour:
   JumpDistance: 1
   timeDeadCamera: 1.5
   lifes: 3
+  pointsPerJump: 10
+  points: 0
   bloodParticles: {fileID: 1116270043477850, guid: 0f61f53f67ad0da4fb17c888ef4a9e89,
     type: 2}
   whaterParticles: {fileID: 1116270043477850, guid: 983549390c4bd2f42a119fd12aa2a0b3,

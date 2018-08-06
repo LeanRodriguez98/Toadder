@@ -7971,23 +7971,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 128a825e83850a849b30736070bed5a7, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1626528003 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1867960921604916, guid: 93a4e4427a2d51b4da86042f8f916922,
-    type: 2}
-  m_PrefabInternal: {fileID: 1724813128}
---- !u!114 &1626528007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1626528003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de86e12757978924489fac7c8dc43fed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trigger: 0
 --- !u!1 &1635402449 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1586898844037866, guid: 128a825e83850a849b30736070bed5a7,
@@ -8380,11 +8363,6 @@ Prefab:
     - target: {fileID: 4302136636961628, guid: 93a4e4427a2d51b4da86042f8f916922, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114900841753408100, guid: 93a4e4427a2d51b4da86042f8f916922,
-        type: 2}
-      propertyPath: pointsPerJump
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93a4e4427a2d51b4da86042f8f916922, type: 2}

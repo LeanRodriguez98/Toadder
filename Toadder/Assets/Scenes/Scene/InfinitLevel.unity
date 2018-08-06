@@ -192,6 +192,50 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 27815442}
+--- !u!1 &75473556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 75473558}
+  - component: {fileID: 75473557}
+  m_Layer: 0
+  m_Name: PlayerStats
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &75473557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75473556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b717f08c784d6748802bc9d15d27f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadingScene: {fileID: 102900000, guid: 6abcf16ea8481a146bf62c62f0154395, type: 3}
+  Points: 0
+  Minutes: 0
+  Seconds: 0
+--- !u!4 &75473558
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75473556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 470.0862, y: 266.2519, z: 10.76183}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &246286280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,7 +1907,7 @@ MonoBehaviour:
     type: 2}
   tree: {fileID: 1722715452549470, guid: 128a825e83850a849b30736070bed5a7, type: 2}
   spawnObstacleProbability: 15
-  StartTerrainsToGenerate: 10
+  StartTerrainsToGenerate: 25
   distanceGenerate: 2
 --- !u!4 &1621082461
 Transform:
