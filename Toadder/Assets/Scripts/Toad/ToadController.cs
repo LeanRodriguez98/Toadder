@@ -21,8 +21,8 @@ public class ToadController : MonoBehaviour
     private float auxTimeDeadCamera;
     private int auxPoints;
     private bool inputMovement;
-    private bool tableMovement;
-    private bool directionTable;
+    private bool WhaterStuffMovement;
+    private bool WhatherStuffDirection;
     private bool lifeDown;
     private Vector3 position;
     private Vector3 auxPosition;
@@ -39,7 +39,7 @@ public class ToadController : MonoBehaviour
         points = PlayerStats.Instancie.Points;
         auxPoints = PlayerStats.Instancie.Points;
         inputMovement = true;
-        tableMovement = false;
+        WhaterStuffMovement = false;
         lifeDown = false;
         position = transform.position;
         auxPosition = transform.position;
@@ -71,7 +71,7 @@ public class ToadController : MonoBehaviour
                 {
                     auxPosition.z += JumpDistance;
                     transform.eulerAngles = characterRotations[0];
-                    tableMovement = false;
+                    WhaterStuffMovement = false;
                     if (auxPoints == points)
                     {
                         points += pointsPerJump;
@@ -86,7 +86,7 @@ public class ToadController : MonoBehaviour
                 {
                     auxPosition.z -= JumpDistance;
                     transform.eulerAngles = characterRotations[2];
-                    tableMovement = false;
+                    WhaterStuffMovement = false;
                     auxPoints += -pointsPerJump;
 
                 }
@@ -94,13 +94,13 @@ public class ToadController : MonoBehaviour
                 {
                     auxPosition.x -= JumpDistance;
                     transform.eulerAngles = characterRotations[3];
-                    tableMovement = false;
+                    WhaterStuffMovement = false;
                 }
                 if (Input.GetKeyDown(KeyCode.D) && !MovementColliders[3].gameObject.GetComponent<MovementColliders>().trigger)
                 {
                     auxPosition.x += JumpDistance;
                     transform.eulerAngles = characterRotations[1];
-                    tableMovement = false;
+                    WhaterStuffMovement = false;
                 }
 
                 if (auxPosition.x > position.x + movementTolerance ||
@@ -131,15 +131,15 @@ public class ToadController : MonoBehaviour
 
             }
 
-            if (tableMovement)
+            if (WhaterStuffMovement)
             {
                 if (MovementColliders[3].gameObject.GetComponent<MovementColliders>().trigger ||
                     MovementColliders[2].gameObject.GetComponent<MovementColliders>().trigger)
                 {
-                    tableMovement = false;
+                    WhaterStuffMovement = false;
                 }
 
-                if (directionTable)
+                if (WhatherStuffDirection)
                 {
                     transform.position += Vector3.right * Time.deltaTime * tableSpeed;
                 }
@@ -170,7 +170,7 @@ public class ToadController : MonoBehaviour
             auxPosition = transform.position;
             auxTimeDeadCamera = 0;
             lifeDown = false;
-            tableMovement = false;
+            WhaterStuffMovement = false;
 
             if (lifes <= 0)
             {
@@ -211,15 +211,15 @@ public class ToadController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Table" || collision.gameObject.tag == "Tourtle")
         {
-            tableMovement = true;
+            WhaterStuffMovement = true;
             tableSpeed = collision.gameObject.GetComponent<ObjectMovement>().speedMovement;
             if (collision.gameObject.GetComponent<ObjectMovement>().spawnPosition.x < 0)
             {
-                directionTable = true;
+                WhatherStuffDirection = true;
             }
             else
             {
-                directionTable = false;
+                WhatherStuffDirection = false;
             }
         }
     }
